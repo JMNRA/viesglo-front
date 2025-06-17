@@ -1,10 +1,21 @@
 <template>
   <div>
     <h1>My Component</h1>
-    <!-- Que bendicion -->
   </div>
+
+  <button @click="increment">Increment</button>
+  <p>Count: {{ count }}</p>
 </template>
 
-<script setup></script>
+<script setup>
 
-<!-- no tiene tilde ñi ñi ñii -->
+const count = ref(0)
+
+const increment = () => {
+  count.value++
+}
+
+
+
+</script>
+
