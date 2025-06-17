@@ -1,0 +1,32 @@
+{
+  "name": "Viesglo Frontend (Nuxt.js 3)",
+  "image": "node:22-bullseye",
+
+  "forwardPorts": [3000, 24678],
+  
+  "postCreateCommand": "npm install -g pnpm@latest && pnpm install",
+
+  "remoteUser": "root",
+  
+  "postStartCommand": "apt-get update && apt-get install -y git vim curl",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "Vue.volar",
+        "Nuxt.nuxtr",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
